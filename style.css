@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+:root{
+  --dark-color: hsl(0,0%,0%);
+  --gray-color: hsl(0,0%,60%);
+  --light-color: hsl(0,0%,100%);
+  --border-color-dark: hsl(10,95%,70%);
+  --border-color-normal: hsl(10,95%,83%);
+  --border-color-light: hsl(10,95%,93%);
+}
+*{
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL STYLES */
+a{
+  text-decoration: none;
+  transition: .25s;
+}
+button{
+  background: transparent;
+  border: none;
+  border-radius: 2em;
+  cursor: pointer;
+  font-size: .875em;
+  font-weight: 600;
+  height: 2em;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+  transition: .25s;
+}
+button:hover{
+  color: orangered;
+}
+header{
+  min-height: 100vh;
+}
+
+p{
+  color: var(--gray-color);
+  font-size: .875em;
+  line-height: 1.5;
+  margin: 1em 0;
+}
+
+
+/* CONTAINERS STYLES */
+
+.container{
+  padding: 1em;
+}
+.flex-container{
+  display: flex;
+}
+
+/* HEADER NAV */
+.logo-link{
+  color: var(--dark-color);
+  font-weight: 600;
+  letter-spacing: .125em;
+  text-transform: uppercase;
+}
+.logo-link:hover{
+  color: orangered;
+  font-weight: 600;
+  letter-spacing: .125em;
+  text-transform: uppercase;
+}
+.header-nav{
+  align-items: center;
+  flex-direction: column;
+}
+.header-menu{
+  flex-wrap: wrap;
+  justify-content: center;  
+  padding: .75em 0;
+}
+.header-menu-link{
+  color: var(--gray-color);
+  display: block;
+  font-size: .75em;
+  font-weight: 500;
+  padding: .5em .75em;
+  text-transform: uppercase;
+}
+.header-menu-link:hover{
+  color: orangered;
+  text-decoration: underline;
+}
+
+
+
+/* HEADER CONTENT */
+img{
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 80%;
+  width: 100%;
+}
+
+.header-img{
+  border-radius: 50%;
+  box-shadow: 0 0 0 .2em var(--border-color-dark),
+              0 0 0 0.4em var(--border-color-normal),
+              0 0 0 0.6em var(--border-color-light);
+  height: 15em;
+  margin: 2em auto;
+  overflow: hidden;
+  width: 15em;
+  
+
+ }
+.header-description{
+  margin: auto;
+  max-width: 30em
+}
+.header-title{
+  font-size: 2em;
+  letter-spacing: -.025em;
+  line-height: 1.25;
+  margin-top: 100px;
+  margin-left: -.0625em;
+}
+.type-button{
+  margin-top: 1.5em;
+}
+.type-button:after{
+  content: " ▬";
+  margin-left: .5em;
+  vertical-align: .0715em;
+}
+
+@media only screen and (min-width: 1024px){ 
+  /* GLOBAL STYLES */
+  header{
+    overflow: hidden;
+  } 
+  
+  /* CONTAINERS STYLES */
+  .container{
+    padding: 2em;
+  }
+  
+  /* HEADER NAV */
+  .header-nav{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-menu-link{
+    padding: 0 1.5em;
+  }
+  
+  /* HEADER CONTENT */
+  .header-content{
+    position: relative;
+  }
+  .header-img{
+    box-shadow: 0 0 0 1em var(--border-color-dark),
+              0 0 0 2em var(--border-color-normal),
+              0 0 0 3em var(--border-color-light);
+    height: 40vw;
+    margin: 0;
+    position: absolute;
+    right: 5vw;
+    top: -1.5vw;
+    width: 40vw;
+  } 
+  .header-description{
+    margin: 6em 3em 0;
+    max-width: 47vw;
+    
+  }
+  .header-title{
+    font-size: calc(1vw + 2em);
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-height: 1024px){
+  .header-content{
+    margin-top: 15vh;
+  }
+}
+.html1-container {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.col {
+  flex: 1;
+  max-width: 45%;
+  padding: 0 10px;
+}
+
+
+h {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.html-text1:hover{
+  color: orangered;
+  transition: .35s;
+}
+
+.img1 {
+  display: block;
+  width: 110%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 3%;
+}
+
+.img2{
+  display: block;
+  width: 110%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 3%;
+ 
+}
+
+.img3{
+  display: block;
+  width: 90%;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 3%;
+}
+
+.img4{
+  display: block;
+  width: 120%;
+  height: auto;
+  margin-bottom: 50px;
+  border-radius: 3%;
+}
+.img5{
+  display: block;
+  width: 110%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.html2-container{
+  padding: 3em;
+}
+
+.html2-text{
+  text-align: center;
+  font-size: 9px;
+}
+
+.html3-header{
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 1em;
+  text-align: center;
+  color: var(--gray-color)
+}
+
+.html3-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
+  margin-top: 3em;
+}
+
+.box1 {
+  width: 40%;
+  margin: 10px;
+  padding: 20px;
+  
+}
+.thought1{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 27px;
+  text-align: center;
+  color: #1a8e16;
+}
+
+.box2 {
+  width: 30%;
+  font-size: 18px;
+  text-align: justify;
+  margin: 10px;
+  padding: 20px;
+  
+}
+
+.thought2{
+  font-size: 27px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-family: 'Darumadrop One', cursive;
+  color: purple;
+}
+
+
+.box3 {
+  width: 20%;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+  padding: 20px;
+  
+}
+.thought3{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 27px;
+  color: rgb(201, 36, 94);
+}
+
+.box4 {
+  width: 50%;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  
+}
+
+.thought4{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 37px;
+  color: rgb(201, 99, 36);
+}
+
+.box5 {
+  width: 35%;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+.thought5{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 30px;
+  color: rgb(36, 165, 201);
+}
+
+.box6 {
+  width: 35%;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+
+}
+.thought6{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 30px;
+  color: rgb(36, 44, 201);
+}
+
+.box7 {
+  width: 45%;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive;
+}
+.thought7{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 70px;
+  color: rgb(194, 81, 223);
+}
+.box8 {
+  width: 15%;
+}
+.thought8{
+  font-family: 'Darumadrop One', cursive;
+  font-size: 30px;
+  color: rgb(39, 201, 36);
+}
